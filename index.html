@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulatorio Veterinario Gravellona - Cura e professionalità per i vostri amici a quattro zampe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --font-heading: 'Syne', serif;
+            --font-body: 'Quicksand', sans-serif;
+            --color-background: #f0f9f0;
+            --color-text: #1a2e1a;
+            --color-text-light: #1a2e1aCC;
+            --color-primary: #22c55e;
+            --color-accent: #4ade80;
+        }
+    
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 3rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .emergency-nav {
+            background: var(--color-accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hero Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            min-height: 100vh;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            background: var(--color-primary);
+            color: white;
+            padding: 6rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.25rem 2.5rem;
+            background: white;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero-image {
+            background: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1920&q=85') center/cover;
+        }
+
+        /* Services Magazine Layout */
+        .services-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+        }
+
+        .services-section h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .services-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            margin-bottom: 4rem;
+        }
+
+        .services-magazine {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+
+        .service-large {
+            grid-column: span 8;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .service-small {
+            grid-column: span 4;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .service-full {
+            grid-column: span 12;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .service-overlay h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-overlay p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Banner */
+        .contact-banner {
+            background: var(--color-accent);
+            color: white;
+            padding: 5rem 3rem;
+            text-align: center;
+        }
+
+        .contact-banner h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: rgba(255,255,255,0.6);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 400px;
+            }
+
+            .service-large,
+            .service-small {
+                grid-column: span 12;
+            }
+
+            .service-full {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Ambulatorio Veterinario Gravellona</div>
+        <a href="tel:+39 339 1234567" class="emergency-nav">Emergenze H24</a>
+    </nav>
+
+    <div class="hero-grid">
+        <div class="hero-content">
+            <h1>Cura professionale per i vostri amici animali</h1>
+            <p>Da oltre 20 anni ci prendiamo cura della salute e del benessere dei vostri animali con esperienza, passione e tecnologie all'avanguardia.</p>
+            <a href="#contatti" class="cta-button">Prenota una Visita</a>
+        </div>
+        <div class="hero-image"></div>
+    </div>
+
+    <section class="services-section" id="servizi">
+        <h2>I Nostri Servizi</h2>
+        <p class="services-subtitle">Assistenza completa per la salute dei vostri animali</p>
+
+        <div class="services-magazine">
+            <div class="service-large">
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=85" alt="Visite e Vaccinazioni" loading="lazy">
+                    <div class="service-overlay">
+                        <h3>Visite e Vaccinazioni</h3>
+                        <p>Check-up completi, piani vaccinali personalizzati, prevenzione parassiti e consulenza nutrizionale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-small">
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=800&q=85" alt="Chirurgia" loading="lazy">
+                    <div class="service-overlay">
+                        <h3>Chirurgia</h3>
+                        <p>Sala operatoria attrezzata per interventi di routine e chirurgia specialistica con anestesia sicura.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-full">
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1530041539828-114de669390e?w=800&q=85" alt="Diagnostica" loading="lazy">
+                    <div class="service-overlay">
+                        <h3>Diagnostica</h3>
+                        <p>Radiologia digitale, ecografia, laboratorio analisi interno per diagnosi rapide e accurate.</p>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=85" alt="Emergenze" loading="lazy">
+                    <div class="service-overlay">
+                        <h3>Emergenze</h3>
+                        <p>Pronto soccorso veterinario disponibile H24 per urgenze e situazioni critiche.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-banner" id="contatti">
+        <h2>Contattaci</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Telefono</h3>
+                <a href="tel:+39 0323 847123">+39 0323 847123</a>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <a href="mailto:info@veterinariogravellona.it">info@veterinariogravellona.it</a>
+            </div>
+            <div class="contact-item">
+                <h3>Indirizzo</h3>
+                <p>Via Roma 45, 28845 Gravellona Toce (VB)</p>
+            </div>
+            <div class="contact-item">
+                <h3>Emergenze H24</h3>
+                <a href="tel:+39 339 1234567">+39 339 1234567</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ambulatorio Veterinario Gravellona - P.IVA 01234567890</p>
+        <p>Sito creato con PressLess</p>
+    </footer>
+</body>
+</html>
