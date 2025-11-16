@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PressLess - Ambulatorio Veterinario Gravellona - Mockup Variants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+
+        .variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .variant-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .variant-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .variant-card h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .variant-card p {
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .variant-card a {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .variant-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .info {
+            margin-top: 3rem;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .info a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .variants {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ambulatorio Veterinario Gravellona</h1>
+        <p class="subtitle">PressLess Mockup Variants - Scegli il tuo layout preferito</p>
+
+        <div class="variants">
+            <div class="variant-card">
+                <h2>Variant 1</h2>
+                <p><strong>Conservative/Traditional</strong><br>
+                Layout professionale con sezioni a card, design centrato e sicuro. Perfetto per un approccio classico.</p>
+                <a href="./variant-1/">Visualizza Variant 1</a>
+            </div>
+
+            <div class="variant-card">
+                <h2>Variant 2</h2>
+                <p><strong>Magazine/Editorial</strong><br>
+                Layout moderno stile magazine con grid asimmetrica e immagini grandi. Approccio editoriale ed elegante.</p>
+                <a href="./variant-2/">Visualizza Variant 2</a>
+            </div>
+
+            <div class="variant-card">
+                <h2>Variant 3</h2>
+                <p><strong>Visual-First/Bold</strong><br>
+                Layout immersivo con immagini full-bleed e UI minimale. Massimo impatto visivo, esperienza coinvolgente.</p>
+                <a href="./variant-3/">Visualizza Variant 3</a>
+            </div>
+        </div>
+
+        <div class="info">
+            <p>Design System: Syne + Quicksand | Forest Noir colors | Responsive mobile-first</p>
+            <p><a href="https://github.com/giobi/pressless-veterinariogravellona">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
